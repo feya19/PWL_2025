@@ -531,3 +531,71 @@
 
 6. Halaman kategori
    ![alt text](ss/3.2.png)
+
+---
+
+## Tugas
+
+1. Tambahkan button Add di halam manage kategori, yang mengarah ke create kategori baru.
+   ```php
+   //
+   <div class="card-header">
+      Manage Kategori
+      <a href="{{ url('/kategori/create') }}" class="btn btn-primary float-right">Add</a>
+   </div>
+   ```
+   ### Output:
+   ![alt text](ss/4.1.png)
+
+2. Tambahkan menu untuk halaman manage kategori, di daftar menu navbar
+   ```php
+   <?php
+      // config/adminlte.php
+      'menu' => [
+         // Sidebar items:
+         [
+               'text' => 'Manage Kategori',
+               'url' => 'kategori',
+               'icon' => 'far fa-fw fa-folder',
+         ],
+      ],
+   ```
+   ### Output:
+   ![alt text](ss/4.2.png)
+
+3. Tambahkan action edit di datatables dan buat halaman edit serta controllernya 
+   - Action Edit DataTables
+   ![alt text](ss/4.4.png)
+   - Halaman Edit
+   ![alt text](ss/4.3.png)
+   - Controller
+      ```php
+      public function edit($id) {
+         $data = KategoriModel::findOrFail($id);
+         return view('kategori.edit', compact('data'));
+      }
+
+      public function update(Request $request, $id)
+      {
+         $kategori = KategoriModel::findOrFail($id);
+         $kategori->update([
+               'kategori_kode' => $request->kodeKategori, 
+               'kategori_nama' => $request->namaKategori,
+         ]);
+
+         return redirect('/kategori');
+      }
+      ```
+
+4. Tambahkan action delete di datatables serta controllernya
+   - Action Delete DataTables
+   ![alt text](ss/4.6.png)
+   - Controller
+      ```php
+      public function destroy($id) {
+         KategoriModel::destroy($id);
+      
+         return redirect('/kategori');
+      }
+      ```
+   
