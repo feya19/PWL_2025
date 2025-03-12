@@ -440,3 +440,94 @@
 
 16. Datatables sudah dapat di load di url `/kategori`
    ![alt text](ss/2.8.png)
+
+---
+
+## Praktikum 3 – Membuat form kemudian menyimpan data dalam database
+
+1. Menambahkan dua routing berikut ke `web.php`
+   ```php
+   Route::get('/kategori/create', [KategoriController::class, 'create']);
+   Route::post('/kategori', [KategoriController::class, 'store']);
+   ```
+
+2. Menambahkan kedua function ini ke KategoriController.php
+   ```php
+   public function create() {
+        return view('kategori.create');
+   }
+   
+   public function store(Request $request) {
+      KategoriModel::create([
+         'kategori_kode' => $request->kodeKategori,
+         'kategori_nama' => $request->namaKategori,
+      ]);
+      return redirect('/kategori');
+   }
+   ```
+
+3. Buat file blade view di path `resources/views/kategori/create.blade.php`
+   <div style="max-height: 350px; overflow-y: auto;">
+
+   ```php
+   @extends('layouts.app')
+
+   {{-- Customize layout sections --}}
+   @section('subtitle', 'Kategori')
+   @section('content_header_title', 'Kategori')
+   @section('content_header_subtitle', 'Create')
+
+   {{-- Content body: main page content --}}
+   @section('content')
+      <div class="container">
+         <div class="card card-primary">
+               <div class="card-header">
+                  <h3 class="card-title">Buat Kategori baru</h3>
+               </div>
+
+               <form method="post" action="../kategori">
+                  <div class="card-body">
+                     <div class="form-group">
+                           <label for="kodeKategori">Kode Kategori</label>
+                           <input type="text" class="form-control" id="kodeKategori" name="kodeKategori" placeholder="untuk makanan, contoh: MKN">
+                     </div>
+                     <div class="form-group">
+                           <label for="namaKategori">Nama Kategori</label>
+                           <input type="text" class="form-control" id="namaKategori" name="namaKategori" placeholder="Nama">
+                     </div>
+
+                     <div class="card-footer">
+                           <button type="submit" class="btn btn-primary">Submit</button>
+                     </div>
+                  </div>
+         </div>
+         </form>
+      </div>
+   @endsection
+   ```
+4. Lakukan pengecualian proteksi CsrfToken. Karena kita belum melakukan otentikasi.
+   ```php
+   <?php
+
+   namespace App\Http\Middleware;
+
+   use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as Middleware;
+
+   class VerifyCsrfToken extends Middleware
+   {
+      /**
+      * The URIs that should be excluded from CSRF verification.
+      *
+      * @var array<int, string>
+      */
+      protected $except = [
+         '/kategori'
+      ];
+   }
+   ```
+
+5. Akses url `/kategori/create`
+   ![alt text](ss/3.1.png)
+
+6. Halaman kategori
+   ![alt text](ss/3.2.png)
