@@ -31,3 +31,12 @@
    
    - **Tampilan alert delete user**
    ![alt text](ss/1.7.png)
+
+---
+
+## Praktikum 4 - Implementasi Filtering Datatables
+   - **Tampilan halaman index user tanpa memilih filter level**
+   ![alt text](ss/1.8.png)
+
+   - **Tampilan halaman index user dengan filter level administrator**
+   ![alt text](ss/1.9.png)
