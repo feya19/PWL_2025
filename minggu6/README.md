@@ -24,3 +24,12 @@
    
    - **Tampilan pesan berhasil `Edit Data User`**
    ![alt text](ss/2.3.png)
+
+---
+
+## Praktikum 3 - Modal Ajax Hapus Data (Data User)
+   - **Tampilan modal konfirmasi `Delete Data User`**
+   ![alt text](ss/3.1.png)
+  
+   - **Tampilan pesan berhasil `Delete Data User`**
+   ![alt text](ss/3.2.png)
