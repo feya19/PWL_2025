@@ -40,3 +40,19 @@
 
    - **Tampilan halaman index user dengan filter level administrator**
    ![alt text](ss/1.9.png)
+
+---
+
+## Tugas
+#### Implementasi web layout dan datatables
+   - **Daftar Level**
+   ![alt text](ss/2.0.png)
+
+   - **Daftar Kategori**
+   ![alt text](ss/2.1.png)
+   
+   - **Daftar Supplier**
+   ![alt text](ss/2.2.png)
+
+   - **Daftar Barang**
+   ![alt text](ss/2.3.png)
