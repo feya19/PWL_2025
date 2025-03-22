@@ -47,6 +47,7 @@
     <!-- Main content -->
     <section class="content">
         @yield('content')
+        <div id="myModal" class="modal fade animate shake" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" data-width="75%" aria-hidden="true"></div>
     </section>
     <!-- /.content -->
   </div>
@@ -82,6 +83,13 @@
 <script src="{{ asset('Adminlte/dist/js/adminlte.min.js') }}"></script>
 <script>
     $.ajaxSetup({ headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') } });
+</script>
+<script>
+    function modalAction(url = ''){ 
+      $('#myModal').load(url,function(){ 
+          $('#myModal').modal('show'); 
+      }); 
+    }
 </script>
 @stack('js')
 <!-- AdminLTE App -->

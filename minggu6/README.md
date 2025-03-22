@@ -33,3 +33,39 @@
   
    - **Tampilan pesan berhasil `Delete Data User`**
    ![alt text](ss/3.2.png)
+
+---
+
+## Tugas
+#### Implementasi Ajax Form dan Client Validation
+   - **Menu Level**
+      - Tambah Level
+      ![alt text](ss/4.1.1.png)
+      - Edit Level
+      ![alt text](ss/4.1.2.png)
+      - Delete Level
+      ![alt text](ss/4.1.3.png)
+
+   - **Menu Supplier**
+      - Tambah Supplier
+      ![alt text](ss/4.2.1.png)
+      - Edit Supplier
+      ![alt text](ss/4.2.2.png)
+      - Delete Supplier
+      ![alt text](ss/4.2.3.png)
+   
+   - **Menu Kategori**
+      - Tambah Kategori
+      ![alt text](ss/4.3.1.png)
+      - Edit Kategori
+      ![alt text](ss/4.3.2.png)
+      - Delete Kategori
+      ![alt text](ss/4.3.3.png)
+
+   - **Menu Barang**
+      - Tambah Barang
+      ![alt text](ss/4.4.1.png)
+      - Edit Barang
+      ![alt text](ss/4.4.2.png)
+      - Delete Barang
+      ![alt text](ss/4.4.3.png)
