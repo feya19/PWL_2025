@@ -13,12 +13,14 @@ class StokSeeder extends Seeder
      */
     public function run(): void
     {
+        $r_supplier = DB::table('m_supplier')->pluck('supplier_id')->toArray();
         $r_barang = DB::table('m_barang')->pluck('barang_id')->toArray();
         $r_user = DB::table('m_user')->pluck('user_id')->toArray();
 
         $data = [];
         for ($i = 0; $i < 10; $i++) {
             $data[] = [
+                'supplier_id' => $r_supplier[array_rand($r_supplier)],
                 'barang_id' => $r_barang[array_rand($r_barang)],
                 'user_id' => $r_user[array_rand($r_user)],
                 'stok_tanggal' => now(),

@@ -28,7 +28,7 @@ class BarangSeeder extends Seeder
                 ];
             }
 
-            DB::table('m_barang')->insert($data);
+            DB::table('m_barang')->insertOrIgnore($data);
         } else {
             echo "No records found in m_kategori table.";
         }

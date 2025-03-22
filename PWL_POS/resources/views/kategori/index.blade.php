@@ -1,25 +1,75 @@
-@extends('layouts.app')
- 
- {{-- Customize layout sections --}}
- 
- @section('subtitle', 'Kategori')
- @section('content_header_title', 'Home')
- @section('content_header_subtitle', 'Kategori')
- 
- @section('content')
-     <div class="container">
-         <div class="card">
-             <div class="card-header">
-                Manage Kategori
-                <a href="{{ url('/kategori/create') }}" class="btn btn-primary float-right">Add</a>
-             </div>
-             <div class="card-body">
-                 {{ $dataTable->table() }}
-             </div>
-         </div>
-     </div>
- @endsection
- 
- @push('scripts')
-     {{ $dataTable->scripts() }}
- @endpush
+@extends('layouts.template')
+
+@section('content')
+    <div class="card card-outline card-primary">
+        <div class="card-header">
+            <h3 class="card-title">{{ $page->title }}</h3>
+            <div class="card-tools">
+                {{-- <a class="btn btn-sm btn-primary mt-1" href="{{ url('kategori/create') }}">Tambah</a> --}}
+                <button onclick="modalAction('{{ url('kategori/create_ajax') }}')" class="btn btn-sm btn-primary mt-1">Tambah</button>
+            </div>
+        </div>
+        <div class="card-body">
+            @if (session('success'))
+                <div class="alert alert-success">{{ session('success') }}</div>
+            @endif
+            @if (session('error'))
+                <div class="alert alert-danger">{{ session('error') }}</div>
+            @endif
+            <table class="table table-bordered table-striped table-hover table-sm" id="table_kategori">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Kode Kategori</th>
+                        <th>Nama Kategori</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+@endsection
+
+@push('css')
+@endpush
+
+@push('js')
+    <script>
+        var dataUser;
+        $(document).ready(function() {
+            dataUser = $('#table_kategori').DataTable({
+                serverSide: true,
+                ajax: {
+                    "url": "{{ url('kategori/list') }}",
+                    "dataType": "json",
+                    "type": "POST",
+                },
+                columns: [{
+                        data: "DT_RowIndex",
+                        className: "text-center",
+                        orderable: false,
+                        searchable: false
+                    },
+                    {
+                        data: "kategori_kode",
+                        className: "",
+                        orderable: true,
+                        searchable: true
+                    },
+                    {
+                        data: "kategori_nama",
+                        className: "",
+                        orderable: true,
+                        searchable: true
+                    },
+                    {
+                        data: "aksi",
+                        className: "",
+                        orderable: false,
+                        searchable: false
+                    }
+                ]
+            });
+        });
+    </script>
+@endpush

@@ -12,16 +12,16 @@
                 <td>Username</td> 
                 <td>Nama</td>
                 <td>ID Level Pengguna</td> 
-                <td>Aksi</td>
                 <td>Kode Level</td> 
                 <td>Nama Level</td> 
+                <td>Aksi</td>
             </tr> 
             @foreach ($data as $d)
-            
             <tr> 
                 <td>{{ $d->user_id }}</td> 
                 <td>{{ $d->username }}</td> 
                 <td>{{ $d->nama }}</td> 
+                <td>{{ $d->level_id }}</td>
                 <td>{{ $d->level_id }}</td>
                 <td>{{ $d->level->level_kode}}</td>
                 <td>{{ $d->level->level_nama}}</td>
