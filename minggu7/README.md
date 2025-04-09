@@ -86,3 +86,12 @@
       - Role Staff/Kasir: Barang
       ![alt text](ss/3.5.png)
    4. **Submit kode untuk impementasi Authorization pada repository github kalian.**
+
+## Tugas 4 - Implementasi Form Registrasi
+   1. **Silahkan implementasikan form untuk registrasi user.**
+   2. **Screenshot hasil yang kalian kerjakan**
+      - Register
+      ![alt text](ss/4.1.png)
+      - Landing
+      ![alt text](ss/4.2.png)
+   3. **Commit dan push hasil tugas kalian ke masing-masing repo github kalian**
