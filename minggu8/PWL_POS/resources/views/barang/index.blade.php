@@ -5,8 +5,9 @@
         <div class="card-header">
             <h3 class="card-title">{{ $page->title }}</h3>
             <div class="card-tools">
+                <button onclick="modalAction('{{ url('/barang/import') }}')" class="btn btn-sm btn-info mr-1 mt-1">Import Barang</button> 
                 {{-- <a class="btn btn-sm btn-primary mt-1" href="{{ url('barang/create') }}">Tambah</a> --}}
-                <button onclick="modalAction('{{ url('barang/create_ajax') }}')" class="btn btn-sm btn-primary mt-1">Tambah</button>
+                <button onclick="modalAction('{{ url('barang/create_ajax') }}')" class="btn btn-sm btn-primary">Tambah</button>
             </div>
         </div>
         <div class="card-body">
