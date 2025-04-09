@@ -150,3 +150,25 @@
 
          3. **Menambahkan route ke `web.php`**
    3. **Submit kode untuk impementasi export pdf pada repository github kalian**
+
+
+## Tugas 4 - Implementasi Upload File Gambar
+   1. **Silahkan implementasikan fitur upload file untuk mengubah foto profile di project web kalian**
+        - Tambah User
+        ![alt text](ss/4.1.png)
+        - Edit User
+        ![alt text](ss/4.2.png)
+        - Detail User
+        ![alt text](ss/4.3.png)
+        - Hapus User
+        ![alt text](ss/4.4.png)
+
+   2. **Amati dan jelaskan tiap tahapan yang kalian kerjakan, dan jabarkan dalam laporan**
+         1. **Membuat migrasi untuk menambahkan kolom `picture_path`**
+
+         2. **Menambahkan `picture_path` di variable fillable pada UserModel.php**
+
+         3. **Memodifikasi form user untuk upload, edit, detail, dan hapus tampilan foto profil**
+
+         4. **Memodifikasi fungsi `store_ajax()` dan `update_ajax()` UserController.php**
+   3. **Submit kode untuk impementasi upload file gambar pada repository github kalian**

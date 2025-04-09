@@ -21,5 +21,6 @@
                     <td>{{ $level->level_nama }}</td>
                 </tr>
             </table>
+        </div>
     </div>
 </div>

@@ -25,5 +25,6 @@
                     <td>{{ $supplier->supplier_alamat }}</td>
                 </tr>
             </table>
+        </div>
     </div>
 </div>

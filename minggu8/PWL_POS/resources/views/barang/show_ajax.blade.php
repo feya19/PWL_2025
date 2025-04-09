@@ -33,5 +33,6 @@
                     <td>{{ $barang->kategori->kategori_nama }}</td>
                 </tr>
             </table>
+        </div>
     </div>
 </div>
