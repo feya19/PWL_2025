@@ -56,3 +56,33 @@
 
       4. **Memodifikasi route di `web.php`**
    3. **Submit kode untuk impementasi Authorization pada repository github kalian.**
+
+---
+
+## Praktikum 3 - Implementasi Multi-Level Authorizaton di Laravel dengan Middleware
+   - **Menggunakan level user Admin**
+   ![alt text](ss/3.2.png)
+   - **Menggunakan level user Manager**
+   ![alt text](ss/3.1.png)
+   - **Menggunakan level user Staff/Kasir**
+   ![alt text](ss/3.3.png)
+   - **Menggunakan level user Pelanggan**
+   ![alt text](ss/3.4.png)
+
+---
+
+## Tugas 3 - Implementasi Multi-Level Authorization
+   1. **Silahkan implementasikan multi-level authorization pada project kalian masing-masing**
+   2. **Amati dan jelaskan tiap tahapan yang kalian kerjakan, dan jabarkan dalam laporan**
+      - Sesuai dengan langkah-langkah di jobsheet, yakni:
+         1. **Memodifikasi `UserModel.php`**
+
+         2. **Memodifikasi `AuthorizeUser.php`**
+
+         3. **Memodifikasi route di `web.php`**
+   3. **Implementasikan multi-level authorization untuk semua Level/Jenis User dan Menu menu yang sesuai dengan Level/Jenis User**
+      - Role Admin: Semua Fitur
+      - Role Manager: Supplier, Kategori Barang, Barang
+      - Role Staff/Kasir: Barang
+      ![alt text](ss/3.5.png)
+   4. **Submit kode untuk impementasi Authorization pada repository github kalian.**
