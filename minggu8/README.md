@@ -62,3 +62,45 @@
          5. **Menambahkan route ke `web.php`**
 
    4. **Submit kode untuk impementasi prakktikum 1 pada repository github kalian**
+
+---
+
+## Praktikum 2 - Export Data ke Excel
+   - **Login Menggunakan Admin**
+   ![alt text](ss/2.1.png)
+   - **Login Menggunakan Manager**
+   ![alt text](ss/2.2.png)
+
+---
+
+## Tugas 2 - Implementasi File Export Excel
+   1. **Silahkan implementasikan praktikum 2 pada project kalian masing-masing untuk semua menu**
+        1. Data Kategori
+            - Data Index
+
+                ![alt text](ss/2.5.png)
+            - Isi File Export
+
+                ![alt text](ss/2.6.png)
+        2. Data Barang
+            - Data Index
+            
+                ![alt text](ss/2.1.png)
+            - Isi File Export
+            
+                ![alt text](ss/2.2.png)
+        3. Data Supplier
+            - Data Index
+            
+                ![alt text](ss/2.3.png)
+            - Isi File Export
+            
+                ![alt text](ss/2.4.png)
+   2. **Amati dan jelaskan tiap tahapan yang kalian kerjakan, dan jabarkan dalam laporan**
+      - Identik dengan langkah-langkah di praktikum 2, yakni:
+         1. **Menambahkan tombol export data**
+
+         2. **Memodifikasi controller untuk menambahkan fungsi export_excel()**
+
+         3. **Menambahkan route ke `web.php`**
+   3. **Submit kode untuk impementasi prakktikum 2 pada repository github kalian**
