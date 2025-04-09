@@ -66,10 +66,12 @@
 ---
 
 ## Praktikum 2 - Export Data ke Excel
-   - **Login Menggunakan Admin**
-   ![alt text](ss/2.1.png)
-   - **Login Menggunakan Manager**
-   ![alt text](ss/2.2.png)
+   - Data Index
+        
+        ![alt text](ss/2.1.png)
+   - Isi File Export
+        
+        ![alt text](ss/2.2.png)
 
 ---
 
@@ -104,3 +106,47 @@
 
          3. **Menambahkan route ke `web.php`**
    3. **Submit kode untuk impementasi prakktikum 2 pada repository github kalian**
+
+---
+
+## Praktikum 3 - Implementasi Export PDF di Laravel dengan dompdf
+   - Data Index
+        
+        ![alt text](ss/3.1.png)
+   - Isi File Export
+        
+        ![alt text](ss/3.2.png)
+
+---
+
+## Tugas 3 - Implementasi Export PDF pada Laravel
+   1. **Silahkan implementasikan export pdf pada project kalian masing-masing untuk semua menu**
+        1. Data Kategori
+            - Data Index
+
+                ![alt text](ss/3.5.png)
+            - Isi File Export
+
+                ![alt text](ss/3.6.png)
+        2. Data Barang
+            - Data Index
+            
+                ![alt text](ss/3.1.png)
+            - Isi File Export
+            
+                ![alt text](ss/3.2.png)
+        3. Data Supplier
+            - Data Index
+            
+                ![alt text](ss/3.3.png)
+            - Isi File Export
+            
+                ![alt text](ss/3.4.png)
+   2. **Amati dan jelaskan tiap tahapan yang kalian kerjakan, dan jabarkan dalam laporan**
+      - Identik dengan langkah-langkah di praktikum 3, yakni:
+         1. **Menambahkan tombol export data pdf**
+
+         2. **Memodifikasi controller untuk menambahkan fungsi export_pdf()**
+
+         3. **Menambahkan route ke `web.php`**
+   3. **Submit kode untuk impementasi export pdf pada repository github kalian**
