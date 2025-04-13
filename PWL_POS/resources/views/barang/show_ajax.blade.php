@@ -9,10 +9,6 @@
         <div class="modal-body">
             <table class="table table-bordered table-striped table-hover table-sm">
                 <tr>
-                    <th>ID</th>
-                    <td>{{ $barang->barang_id }}</td>
-                </tr>
-                <tr>
                     <th>Kode Barang</th>
                     <td>{{ $barang->barang_kode }}</td>
                 </tr>
@@ -22,16 +18,17 @@
                 </tr>
                 <tr>
                     <th>Harga Beli</th>
-                    <td>{{ $barang->harga_beli }}</td>
+                    <td>{{ number_format($barang->harga_beli, 2, ',', '.') }}</td>
                 </tr>
                 <tr>
                     <th>Harga Jual</th>
-                    <td>{{ $barang->harga_jual }}</td>
+                    <td>{{ number_format($barang->harga_jual, 2, ',', '.') }}</td>
                 </tr>
                 <tr>
                     <th>Kategori</th>
                     <td>{{ $barang->kategori->kategori_nama }}</td>
                 </tr>
             </table>
+        </div>
     </div>
 </div>

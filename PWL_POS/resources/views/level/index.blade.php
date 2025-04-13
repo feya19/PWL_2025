@@ -62,7 +62,8 @@
                     },
                     {
                         data: "aksi",
-                        className: "",
+                        className: "text-nowrap",
+                        width: "1",
                         orderable: false,
                         searchable: false
                     }

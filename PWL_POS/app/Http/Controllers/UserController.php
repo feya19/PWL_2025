@@ -104,6 +104,7 @@ class UserController extends Controller
                 'level_id' => 'required|integer',
                 'username' => 'required|string|min:3|unique:m_user,username',
                 'nama' => 'required|string|max:100',
+                'profile_picture' => 'nullable|image|max:2048',
                 'password' => 'required|min:6'
             ];
 
@@ -118,7 +119,16 @@ class UserController extends Controller
                 ]);
             }
 
-            UserModel::create($request->all());
+            $data = $validator->validated();
+            if ($request->hasFile('profile_picture')) {
+                $image = $request->file('profile_picture');
+                $imageName = 'profile-temp-' . time() . '.webp';
+                $image->storeAs('public/profile_pictures', $imageName);
+                $data['picture_path'] = 'storage/profile_pictures/' . $imageName;
+                unset($data['profile_picture']);
+            }
+            
+            UserModel::create($data);
 
             return response()->json([
                 'status' => true,
@@ -200,6 +210,7 @@ class UserController extends Controller
                 'level_id' => 'required|integer',
                 'username' => 'required|max:20|unique:m_user,username,' . $id . ',user_id',
                 'nama' => 'required|max:100',
+                'profile_picture' => 'nullable|image|max:2048',
                 'password' => 'nullable|min:6|max:20'
             ];
 
@@ -216,11 +227,24 @@ class UserController extends Controller
 
             $check = UserModel::find($id);
             if ($check) {
-                if (!$request->filled('password')) { // jika password tidak diisi, maka hapus dari request
-                    $request->request->remove('password');
+                $data = $validator->validated();               
+                if (!$data['password']) { // jika password tidak diisi, maka hapus dari request
+                    unset($data['password']);
                 }
 
-                $check->update($request->all());
+                if ($request->hasFile('profile_picture')) {
+                    if ($check->picture_path && file_exists(public_path($check->picture_path))) {
+                        unlink(public_path($check->picture_path));
+                    }
+            
+                    $image = $request->file('profile_picture');
+                    $imageName = 'profile-' . $id . '.webp';
+                    $image->storeAs('public/profile_pictures', $imageName);
+                    $data['picture_path'] = 'storage/profile_pictures/' . $imageName;
+                    unset($data['profile_picture']);
+                }                
+
+                $check->update($data);
                 return response()->json([
                     'status' => true,
                     'message' => 'Data berhasil diupdate'

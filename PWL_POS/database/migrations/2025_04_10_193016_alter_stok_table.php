@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('m_kategori', function (Blueprint $table) {
-            $table->id('kategori_id');
-            $table->string('kategori_kode', 10)->unique();
-            $table->string('kategori_nama', 100);
-            $table->timestamps();
+        Schema::table('t_stok', function (Blueprint $table) {
+            $table->dropForeign(['user_id']); // Drop the foreign key constraint
+            $table->dropColumn('user_id');    // Then drop the column
         });
     }
 
@@ -24,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('m_kategori');
+        //
     }
 };
