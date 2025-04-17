@@ -180,6 +180,9 @@ class PenjualanController extends Controller
                 'barang_id.*' => 'required|string|max:50',
                 'jumlah' => 'required|array',
                 'jumlah.*' => 'required|integer|min:1',
+                // 'total' => 'required',
+                // 'bayar' => 'required',
+                // 'kembali' => 'required',
             ];
 
             $validator = Validator::make($request->all(), $rules);
@@ -397,6 +400,9 @@ class PenjualanController extends Controller
             'barang_id.*' => 'required|string|max:50',
             'jumlah' => 'required|array',
             'jumlah.*' => 'required|integer|min:1',
+            // 'total' => 'required',
+            // 'bayar' => 'required',
+            // 'kembali' => 'required',
         ];
 
         $validator = Validator::make($request->all(), $rules);

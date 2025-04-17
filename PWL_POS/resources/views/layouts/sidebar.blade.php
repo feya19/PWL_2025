@@ -19,6 +19,7 @@
           <p>Dashboard</p>
         </a>
       </li>
+      @if(auth()->user()->level->level_kode == 'ADM')
       <li class="nav-header">Data Pengguna</li>
       <li class="nav-item">
         <a href="{{ url('/level') }}" class="nav-link {{ ($activeMenu == 'level') ? 'active' : '' }} ">
@@ -32,6 +33,7 @@
           <p>Data User</p>
         </a>
       </li>
+      @endif
       <li class="nav-header">Data Barang</li>
       <li class="nav-item">
         <a href="{{ url('/supplier') }}" class="nav-link {{ $activeMenu == 'supplier' ? 'active' : '' }}">
