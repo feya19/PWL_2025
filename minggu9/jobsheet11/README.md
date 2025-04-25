@@ -26,3 +26,9 @@
 5. **Hasil**
 
     ![alt text](ss/1.5.png)
+
+---
+
+## Tugas - Implementasi Tabel `m_barang`
+
+![alt text](ss/1.6.png)
