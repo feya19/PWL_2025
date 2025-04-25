@@ -16,6 +16,7 @@ class RegisterController extends Controller
             'username' => 'required',
             'nama' => 'required',
             'password' => 'required|min:5|confirmed',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'level_id' => 'required'
         ]);
 
@@ -29,6 +30,7 @@ class RegisterController extends Controller
             'username' => $request->username,
             'nama' => $request->nama,
             'password' => bcrypt($request->password),
+            'image' => $request->image->hashName(),
             'level_id' => $request->level_id,
         ]);
 
