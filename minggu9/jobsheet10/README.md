@@ -44,3 +44,23 @@
     - Data Valid
         
         ![alt text](ss/1.9.2.png)
+
+---
+
+## Praktikum 2 - Membuat RESTful API Login
+1. **Membuat controller di `controller/Api/LoginController`**
+
+    ![alt text](ss/2.1.png)
+2. **Menambahkan route register di `routes/api.php`**
+    
+    ![alt text](ss/2.2.png)
+3. **Hasil**
+    - Data Kosong
+        
+        ![alt text](ss/2.3.1.png)
+    - Sukses
+        
+        ![alt text](ss/2.3.2.png)
+    - Username atau Password Salah
+        
+        ![alt text](ss/2.3.3.png)
