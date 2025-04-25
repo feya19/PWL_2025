@@ -77,3 +77,29 @@
 3. **Hasil**
         
     ![alt text](ss/3.3.png)
+
+---
+
+## Praktikum 4 - Implementasi CRUD dalam RESTful API
+1. **Membuat controller di `controller/Api/LevelController`**
+
+    ![alt text](ss/4.1.png)
+2. **Menambahkan route register di `routes/api.php`**
+    
+    ![alt text](ss/4.2.png)
+3. **Hasil**
+    - List Data
+        
+        ![alt text](ss/4.3.1.png)
+    - Create Data
+        
+        ![alt text](ss/4.3.2.png)
+    - Get Data by ID (level_id=6)
+        
+        ![alt text](ss/4.3.3.png)
+    - Edit Data level_kode by ID (level_id=6)
+        
+        ![alt text](ss/4.3.4.png)
+    - Delete Data by ID (level_id=6)
+        
+        ![alt text](ss/4.3.5.png)
