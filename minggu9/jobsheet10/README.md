@@ -64,3 +64,16 @@
     - Username atau Password Salah
         
         ![alt text](ss/2.3.3.png)
+
+---
+
+## Praktikum 3 - Membuat RESTful API Logout
+1. **Membuat controller di `controller/Api/LogoutController`**
+
+    ![alt text](ss/3.1.png)
+2. **Menambahkan route register di `routes/api.php`**
+    
+    ![alt text](ss/3.2.png)
+3. **Hasil**
+        
+    ![alt text](ss/3.3.png)
