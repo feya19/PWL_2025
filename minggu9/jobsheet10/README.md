@@ -103,3 +103,16 @@
     - Delete Data by ID (level_id=6)
         
         ![alt text](ss/4.3.5.png)
+
+---
+
+## Tugas - Implementasi Tabel Lain
+1. **Tabel `m_user`**
+
+    ![alt text](ss/5.1.png)
+2. **Tabel `m_kategori`**
+    
+    ![alt text](ss/5.2.png)
+3. **Tabel `m_barang`**
+        
+    ![alt text](ss/5.3.png)
